@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+  <title>CampusCompass — Find Your Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="CampusCompass home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5 27 8v8.3c0 6.2-4.7 10.3-11 12.2C9.7 26.6 5 22.5 5 16.3V8l11-4.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m11 19 3.1-7.8L21 9l-2.3 6.8L11 19Z" fill="currentColor"/><circle cx="16" cy="15" r="1.5" fill="#08111f"/></svg></span>
+        <span><strong>Campus<span>Compass</span></strong><small>YOUR CAMPUS, SIMPLIFIED</small></span>
+      </a>
+      <div class="campus-select"><span class="campus-icon">⌂</span><span><small>YOUR CAMPUS</small><strong>VJCET · Demo map</strong></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">NAVIGATION</div>
+      <button class="nav-item active" id="navExplore"><span>⌖</span> Indoor navigation <kbd>01</kbd></button>
+      <button class="nav-item" id="navExam"><span>▦</span> Exam Rush <kbd>02</kbd></button>
+      <div class="nav-label places-label">CAMPUS DESTINATIONS</div>
+      <div class="quick-list" id="quickList">
+        <div class="nav-label">A BLOCK</div>
+        <button class="quick-place" data-place-id="A101"><span class="place-icon">⌂</span><span>A101 Classroom</span></button>
+        <button class="quick-place" data-place-id="A102"><span class="place-icon">⌂</span><span>A102 Classroom</span></button>
+        <button class="quick-place" data-place-id="A103"><span class="place-icon">⌂</span><span>A103 Classroom</span></button>
+        <button class="quick-place" data-place-id="A104"><span class="place-icon">⌂</span><span>A104 Classroom</span></button>
+        <button class="quick-place" data-place-id="A105"><span class="place-icon">⌂</span><span>A105 Classroom</span></button>
+        <button class="quick-place" data-place-id="A201"><span class="place-icon">⌂</span><span>A201 Classroom</span></button>
+        <button class="quick-place" data-place-id="A202"><span class="place-icon">⌂</span><span>A202 Classroom</span></button>
+        <button class="quick-place" data-place-id="A203"><span class="place-icon">⌂</span><span>A203 Classroom</span></button>
+        <button class="quick-place" data-place-id="A204"><span class="place-icon">⌂</span><span>A204 Classroom</span></button>
+        <button class="quick-place" data-place-id="A205"><span class="place-icon">⌂</span><span>A205 Classroom</span></button>
+        <button class="quick-place" data-place-id="A206"><span class="place-icon">⌂</span><span>A206 Classroom</span></button>
+        <button class="quick-place" data-place-id="a-hod"><span class="place-icon">▤</span><span>H.O.D. IT Department</span></button>
+        <div class="nav-label">B BLOCK</div>
+        <button class="quick-place" data-place-id="B101"><span class="place-icon">⌂</span><span>B101 Classroom</span></button>
+        <button class="quick-place" data-place-id="B102"><span class="place-icon">⌂</span><span>B102 Classroom</span></button>
+        <button class="quick-place" data-place-id="B103"><span class="place-icon">⌂</span><span>B103 Classroom</span></button>
+        <button class="quick-place" data-place-id="B104"><span class="place-icon">⌂</span><span>B104 Classroom</span></button>
+        <button class="quick-place" data-place-id="B201"><span class="place-icon">⌂</span><span>B201 Classroom</span></button>
+        <button class="quick-place" data-place-id="B202"><span class="place-icon">⌂</span><span>B202 Classroom</span></button>
+        <button class="quick-place" data-place-id="B203"><span class="place-icon">⌂</span><span>B203 Classroom</span></button>
+        <button class="quick-place" data-place-id="B204"><span class="place-icon">⌂</span><span>B204 Classroom</span></button>
+        <button class="quick-place" data-place-id="b-repro"><span class="place-icon">▧</span><span>Reprography Centre</span></button>
+        <button class="quick-place" data-place-id="b-auditorium"><span class="place-icon">◫</span><span>Mini Auditorium</span></button>
+        <div class="nav-label">C BLOCK</div>
+        <button class="quick-place" data-place-id="C101"><span class="place-icon">⌂</span><span>C101 Classroom</span></button>
+        <button class="quick-place" data-place-id="C102"><span class="place-icon">⌂</span><span>C102 Classroom</span></button>
+        <button class="quick-place" data-place-id="C103"><span class="place-icon">⌂</span><span>C103 Classroom</span></button>
+        <button class="quick-place" data-place-id="C104"><span class="place-icon">⌂</span><span>C104 Classroom</span></button>
+        <button class="quick-place" data-place-id="C105"><span class="place-icon">⌂</span><span>C105 Classroom</span></button>
+        <button class="quick-place" data-place-id="C201"><span class="place-icon">⌂</span><span>C201 Classroom</span></button>
+        <button class="quick-place" data-place-id="C202"><span class="place-icon">⌂</span><span>C202 Classroom</span></button>
+        <button class="quick-place" data-place-id="C203"><span class="place-icon">⌂</span><span>C203 Classroom</span></button>
+        <button class="quick-place" data-place-id="C204"><span class="place-icon">⌂</span><span>C204 Classroom</span></button>
+        <button class="quick-place" data-place-id="C205"><span class="place-icon">⌂</span><span>C205 Classroom</span></button>
+        <button class="quick-place" data-place-id="C206"><span class="place-icon">⌂</span><span>C206 Classroom</span></button>
+        <button class="quick-place" data-place-id="c-library"><span class="place-icon">▤</span><span>Central Library</span></button>
+        <button class="quick-place" data-place-id="c-seminar"><span class="place-icon">◫</span><span>Seminar Hall</span></button>
+        <div class="nav-label">OTHER</div>
+        <button class="quick-place" data-place-id="d-block"><span class="place-icon">⌖</span><span>D Block</span></button>
+        <button class="quick-place" data-place-id="rd-block"><span class="place-icon">⌖</span><span>R &amp; D Block</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">Campus <span>/</span> <strong id="crumb">Explore</strong></div>
+        <div class="top-actions"><span class="demo-badge"><i></i> LIVE DEMO</span><button class="avatar" title="CampusCompass demo user">CC</button></div>
+      </header>
+
+      <section class="welcome">
+        <div><p class="eyebrow">A · B · C · D BLOCKS</p><h1>Find your room.<br><span>Follow the route.</span></h1><p class="subhead">Choose a starting point and destination across campus, then follow the mapped passages and bridges.</p></div>
+        <div class="welcome-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="compass-illustration"><span>N</span><div class="needle"></div><b>⌖</b></div><span class="spark spark-a">✦</span><span class="spark spark-b">✧</span></div>
+      </section>
+
+      <section class="search-panel">
+        <div class="search-title"><div class="search-symbol">⌕</div><div><strong>Where do you need to go?</strong><small>Search rooms and facilities in A, B, C, or D Block</small></div><span class="search-tag">CAMPUS ROUTES</span></div>
+        <div class="search-controls">
+          <label class="search-box"><span>⌕</span><input id="destinationInput" type="search" list="destinationOptions" placeholder="Try “A102” or “Staff Room”" autocomplete="off"><datalist id="destinationOptions"></datalist><button id="clearSearch" class="clear-search" aria-label="Clear search">×</button></label>
+          <label class="start-box"><span>YOU ARE AT</span><select id="startSelect" aria-label="Starting point"></select></label>
+          <button id="findRoute" class="primary-btn">Navigate <span>↗</span></button>
+        </div>
+        <div class="suggestions"><span>POPULAR:</span><div id="suggestionButtons"></div></div>
+      </section>
+
+      <section class="workspace">
+        <div class="map-card">
+          <div class="card-heading"><div><p class="eyebrow">CAMPUS OVERVIEW</p><h2>Explore the campus plan</h2></div><div class="map-actions"><select id="blockPlanSelect" aria-label="Open a block floor plan"><option value="">Block plans</option><option value="A">A Block</option><option value="B">B Block</option><option value="C">C Block</option></select><button id="resetMap" title="Reset map view">↺ <span>Reset</span></button><button id="zoomIn" title="Zoom in">＋</button><button id="zoomOut" title="Zoom out">−</button></div></div>
+          <div class="map-stage" id="mapStage">
+            <div class="map-legend"><span><i class="legend-dot route-dot"></i> Route</span><span><i class="legend-location"></i> You are here</span><span><i class="legend-destination"></i> Destination</span></div>
+            <div class="map-transform" id="mapTransform">
+              <svg id="indoorMap" viewBox="0 0 1024 512" role="img" aria-label="Interactive campus key plan with clickable destinations and highlighted routes"></svg>
+              
+            </div>
+            <div class="map-scale"><span class="scale-line"></span> Drag to explore</div>
+          </div>
+          <div class="map-caption"><span class="map-caption-icon">ⓘ</span><span>Click a place pin to route there. Choose your starting point, zoom in, then drag to explore campus.</span></div>
+        </div>
+
+        <aside class="details-card">
+          <div class="details-top"><p class="eyebrow">YOUR JOURNEY</p><span class="route-state" id="routeState">READY</span></div>
+          <div class="destination-placeholder" id="destinationPlaceholder">
+            <svg class="placeholder-map" viewBox="0 0 260 130" role="img" aria-label="The campus key plan with a highlighted sample route">
+              <image href="assets/campus-key-plan-final.jpg" x="0" y="0" width="260" height="130" preserveAspectRatio="none" />
+              <path class="mini-route" d="M24 61 H91 V49 V38 H54" />
+              <circle class="mini-start" cx="24" cy="61" r="4" /><circle class="mini-end" cx="54" cy="38" r="4" />
+            </svg>
+            <h3>Your next room<br>is one search away.</h3>
+            <p>Choose where you are on campus, then search for a room to preview the route.</p>
+          </div>
+          <div id="routeDetails" class="route-details" hidden></div>
+          <div class="detail-foot"><span class="foot-icon">✦</span><p><strong>Built for busy campus days</strong><br>Find the place. Follow the path. Get there.</p></div>
+        </aside>
+      </section>
+      <footer><span>© 2026 CampusCompass</span><span>Designed for the moments when every minute matters.</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div class="plan-modal" id="planModal" hidden>
+    <section class="plan-dialog" role="dialog" aria-modal="true" aria-labelledby="planTitle">
+      <header class="plan-dialog-header"><div><p class="eyebrow" id="planFloorLabel">A Block · Ground Floor</p><h2 id="planTitle">A Block · Floor Plan</h2></div><button class="plan-close" id="closePlan" aria-label="Close floor plan">×</button></header>
+      <div class="floor-tabs" id="floorTabs" role="tablist" aria-label="Choose floor"></div>
+      <div class="plan-image-frame"><img id="planImage" alt="Selected block floor plan"></div>
+      <p class="plan-help">Use these floor plans to locate rooms and passages. Select a floor above to switch views.</p>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
